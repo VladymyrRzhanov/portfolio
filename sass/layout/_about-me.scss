@@ -1,0 +1,233 @@
+.main-container {
+  padding-top: 30px;
+  @media screen and (min-width: 768px) {
+    width: 70%;
+  }
+}
+
+.about-me-container {
+  padding: 0px 30px 50px 30px;
+
+  @media screen and (max-width: 767px) {
+    padding-left: calc((100vw - 320px) / (480 - 320) * (40 - 30) + 30px);
+    padding-right: calc((100vw - 320px) / (480 - 320) * (40 - 30) + 30px);
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0px 40px 80px 40px;
+  }
+
+  @media screen and (min-width: 960px) {
+    padding: 0px 50px 80px 50px;
+  }
+}
+
+.info-tablet {
+  padding: 20px;
+}
+
+.info-container {
+  width: 100%;
+  padding: 100px 0 50px;
+  text-align: center;
+  background-color: $title-background;
+  margin-bottom: 70px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  .profession {
+    //    margin-bottom: 25px;
+    @include mainfont($primary-white-color);
+    font-size: 25px;
+    font-weight: $title-font-weight;
+  }
+
+  .name {
+    font-family: Podkova;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: $title-font-weight;
+    line-height: $name-line-height;
+    font-size: 30px;
+    color: $title-color;
+
+    @media screen and (max-width: 480px) {
+      font-size: calc((100vw - 320px) / (480 - 320) * (30 - 25) + 25px);
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 35px;
+    }
+
+    @media screen and (min-width: 960px) {
+      font-size: 45px;
+    }
+  }
+
+  .description {
+    @include mainfont($primary-black-color);
+  }
+}
+
+.personal {
+  margin-bottom: 15px;
+  @include secondaryfont();
+  color: $accent-color;
+}
+
+.profession-time {
+  @include secondaryfont();
+}
+
+.projects-container {
+  margin-bottom: 20px;
+}
+
+.about-me-title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  @include titlefont($title-color);
+}
+
+.projects-item {
+  margin-left: 20px;
+  font-weight: $title-font-weight;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .projects-link {
+    display: inline-block;
+    // @include mainfont($link-color);
+    @include companyfont($accent-color);
+    text-decoration: none;
+
+    @include transit(transform);
+
+    &:hover,
+    &:focus
+    // .projects-item:hover &,
+    // .projects-item:focus &
+    {
+      transform: scale(1.05);
+      // font-size: 18px
+      // text-decoration: underline;
+    }
+  }
+
+  .tech-name {
+    @include mainfont($link-color);
+  }
+}
+
+.dots {
+  color: $dots-color;
+  font-weight: $dots-font-weight;
+
+  @media screen and (max-width: 657px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 658px) and (max-width: 767px) {
+    display: inline;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1030px) {
+    display: inline;
+  }
+}
+
+.link-description {
+  @media screen and (max-width: 657px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 657px) and (max-width: 767px) {
+    display: inline;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1030px) {
+    display: block;
+  }
+}
+
+.about-project {
+  @include mainfont($link-color);
+}
+
+.about {
+  font-weight: 600;
+}
+
+.profession-title {
+  // margin-bottom: 5px;
+  @include companyfont($primary-black-color);
+}
+
+.education-company,
+.profession-company {
+  display: inline-block;
+  color: $accent-color;
+  text-decoration: none;
+  @include transit(transform);
+
+  &:hover,
+  &:focus {
+    // text-decoration: underline;
+    // font-size: 17px;
+    transform: scale(1.05);
+  }
+}
+
+.profession-divider {
+  color: $primary-black-color;
+}
+
+.profession-divider-personal {
+  color: $accent-color;
+}
+
+.profession-duties {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  // list-style: none;
+}
+
+.profession-duties-item {
+  @include mainfont($link-color);
+}
+
+.work-container {
+  margin-bottom: 30px;
+}
+
+// .education-company {
+//   display: inline-block;
+//   margin-top: 10px;
+//   margin-bottom: 5px;
+//   @include companyfont($accent-color);
+//   text-decoration: none;
+//   @include transit(font-size);
+
+//   &:hover,
+//   &:focus {
+//     // text-decoration: underline;
+//     font-size: 17px;
+//   }
+// }
+
+.education-duties {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+  @include mainfont($link-color);
+}
+
+.education-duties-item {
+  // margin-left: 20px;
+  @include mainfont($link-color);
+}
