@@ -356,7 +356,7 @@ h4 {
 
 .sidebar {
   background: #e1d8cf;
-  padding: 150px 30px 60px;
+  padding: 30px 30px 30px;
   -webkit-box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
 }
@@ -364,6 +364,7 @@ h4 {
 @media screen and (min-width: 768px) {
   .sidebar {
     max-width: 30%;
+    padding: 150px 30px 60px;
   }
 }
 
@@ -374,8 +375,8 @@ h4 {
 }
 
 .photo-container {
-  width: 250px;
-  height: 250px;
+  max-width: 250px;
+  height: auto;
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto 50px;
@@ -392,7 +393,6 @@ h4 {
   text-align: center;
   padding: 50px 0 30px;
   background-color: #373741;
-  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -584,13 +584,6 @@ h4 {
 
 .about-me-container {
   padding: 0px 30px 50px 30px;
-}
-
-@media screen and (max-width: 767px) {
-  .about-me-container {
-    padding-left: calc((100vw - 320px) / (480 - 320) * (40 - 30) + 30px);
-    padding-right: calc((100vw - 320px) / (480 - 320) * (40 - 30) + 30px);
-  }
 }
 
 @media screen and (min-width: 768px) {

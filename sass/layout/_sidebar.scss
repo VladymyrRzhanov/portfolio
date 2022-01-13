@@ -1,11 +1,12 @@
 .sidebar {
   background: $sidebar-bg-color;
   // min-width: 320px;
-  padding: 150px 30px 60px;
+  padding: 30px 30px 30px;
   box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
 
   @media screen and (min-width: 768px) {
     max-width: 30%;
+    padding: 150px 30px 60px;
   }
 
   @media screen and (min-width: 960px) {
@@ -14,8 +15,8 @@
 }
 
 .photo-container {
-  width: 250px;
-  height: 250px;
+  max-width: 250px;
+  height: auto;
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto 50px;
@@ -30,7 +31,6 @@
   text-align: center;
   padding: 50px 0 30px;
   background-color: $title-background;
-  margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     display: none;
